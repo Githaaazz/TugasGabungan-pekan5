@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title> Belik ESKREM</title>
+    <style>img{
+        width: 50%;
+    }
+    </style>
+</head>
+<body>
+    <H1 style=text-align:center id="judul">MAU YANG MANA? ESKREMNYA ENAK LOO </H1>
+    <audio controls>
+        <source src="WhatsApp Audio 2020-11-26 at 23.15.04.mpeg" type="audio/mpeg">
+       OST pengiring
+      </audio> 
+      <br><br><br>
+        <form id="form1">
+                        Pilihan ESKREM: <select name="eskrim" id="eskrim" onchange="choose()">
+                            <option value="">Sini Pilih</option>
+                            <option value="Rainbow">Rainbow</option>
+                            <option value="ChocoMagma">Choco Magma</option>
+                            <option value="ShakyShake">Shaky-Shake</option>
+                            <option value="Magnum">Magnum</option>
+                            <option value="Vienetta">Vienetta</option>
+                            </select>
+    <br><br><br>
+    <img src="KumpulanWalls.jpg" alt="Eskremwalls" id="gambar" style="width: 100%">
+    <br>
+    <script>
+        function choose(){
+            let input_gambar= document.getElementById("eskrim").value;
+            if(input_gambar =="Rainbow"){
+                document.getElementById("gambar").src="Rainbow_Walls.jpg";
+            }else if(input_gambar =="ChocoMagma"){
+                document.getElementById("gambar").src="ChocoMagma.jpg";
+            }else if(input_gambar =="ShakyShake"){
+                document.getElementById("gambar").src="Shaky-shake_Walls.jpg";
+            }else if(input_gambar =="Magnum"){
+                document.getElementById("gambar").src="Magnum.jpg";
+            }else if(input_gambar =="Vienetta"){
+                document.getElementById("gambar").src="Vienetta2.jpg";
+            }else{console.log("gambarnya_ga_ada")}
+        }
+
+    </script>
+</body>
+</html>

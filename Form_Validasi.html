@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Form Validation</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: skyblue;
+            }
+        </style>
+</head>
+<body>
+    <h1> FORM VALIDASI </h1>
+    <hr>
+    <br><br>
+    <div class="container">
+        <form name="formValidasi" method="post" action="" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control" required maxlength="40" minlength="3">
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email Aktif" class="form-control">
+                <small style="background-color:lightcoral;" id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Jam Keberangkatan</label>
+                <input type="time" id="waktu" min="00.00" max="23.59"><br>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Tujuan Keberangkatan</label>
+                <select name="tujuan" class="form-control">
+                        <option value="0">Pilih Tujuan</option>
+                        <option value="1">Binjai</option>
+                        <option value="2">Medan Johor</option>
+                        <option value="3"> Medan Amplas</option>
+                        <option value="1">Medan Maimun</option>
+                        <option value="2">Medan Selayang</option>
+                        <option value="3"> Medan Polonia</option>
+                    </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Jumlah Tiket</label>
+                <select name="jumlahtiket" class="form-control">
+                        <option value="0">Pilih Jumlah</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+            <br><br><br>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+    <script>
+        function Form_Validasi() {
+            if (document.forms["formPendaftaran"]["nama"].value == "") 
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["nama"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["email"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["jamkeberangkatan"].selectedIndex < 1) {
+                alert("Pilih Jam.");
+                document.forms["formPendaftaran"]["jamkeberangkatan"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["tujuankeberangkatan"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["tujuankeberangkatan"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["jumlahtiket"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["jumlahtiket"].focus();
+                return false;
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        body {
+            text-align: center;
+            background-color:mediumturquoise;
+        }
+    </style>
+</head>
+<body>
+    <h1>CURHAT DONG MAH</h1>
+    <hr>
+    <br>
+    <p>IYAA DOONG.. </p>
+    <p>Mau curhat apa hari ini??  ^_^</p>
+    <input id="pesan" style="width: 50%" type="text" name="pesan">
+    <button type="submit" onclick="tebaknama()">Kirim Pesan</button>
+    <p id="hasil"></p>
+
+    <script>
+        let nama = "Githaaaa";
+        function tebaknama(){
+            document.getElementById("hasil").innerHTML = "Namakuu Githaaaa " + nama;
+        }
+    </script>
+</body>
+</html>
